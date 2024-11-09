@@ -71,7 +71,7 @@ function checkAppointment(time, length) {
   // Check if the time is within the valid range
   if (time >= START_OF_DAY && time <= FINAL_APPOINTMENT_TIME) {
     // Check if the length is valid
-    if (time < FINAL_APPOINTMENT_TIME && length > 0) {
+    if (length > 0) { // Allow length greater than 0 regardless of time
       // Check if the time slot is available
       const appointment = getAppointment(time);
       if (appointment.name === "available") {
