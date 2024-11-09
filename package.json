@@ -3,13 +3,13 @@
     "demo": "node dayDemo.js",
     "test": "jest"
   },
-  "dependencies": {
-    "jest": "^29.7.0"
-  },
   "name": "jest",
   "main": "dayDemo.js",
   "version": "1.0.0",
   "description": "Workshop on Testing with Jest",
   "author": "Tony Beaumont",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

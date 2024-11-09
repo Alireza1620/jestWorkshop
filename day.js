@@ -62,10 +62,8 @@ function printAppointments() {
 function makeAppointment(time, person, length) {
   if (updateIndex(time, person, length)){
     return true;
-  }else{
-    return false;
   }
-    
+  return false;  
 }
 function checkAppointment(time, length) {
   // Check if the time is within the valid range
