@@ -21,6 +21,7 @@ function updateIndex(time, person, length) {
     const index = time - START_OF_DAY;
     appointments[index].name = person;
     appointments[index].length = length;
+    return true;
   }
   return false;
 }
