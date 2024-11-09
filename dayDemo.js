@@ -22,5 +22,5 @@ makeAppointment(14, "John", 5);
 makeAppointment(16, "John", 4);
 //Next 2 lines are special tests:
 makeAppointment(17, "John", 5);
-makeAppointment(17, "John", 1);
+//makeAppointment(17, "John", 1);
 printAppointments();

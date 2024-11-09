@@ -17,9 +17,12 @@ function setUpDay() {
 
 // insert an appointment at a specific time
 function updateIndex(time, person, length) {
-  const index = time - START_OF_DAY;
-  appointments[index].name = person;
-  appointments[index].length = length;
+  if (checkAppointment(time,length)){
+    const index = time - START_OF_DAY;
+    appointments[index].name = person;
+    appointments[index].length = length;
+  }
+  return false;
 }
 
 // Get the appointment at a specific time.
@@ -64,14 +67,17 @@ function makeAppointment(time, person, length) {
   }
     
 }
-function checkAppointment(time, person, length) {
+function checkAppointment(time, length) {
   // Check if the time is within the valid range
   if (time >= START_OF_DAY && time <= FINAL_APPOINTMENT_TIME) {
     // Check if the length is valid
-    if ((time === FINAL_APPOINTMENT_TIME && length === 1) || (time < FINAL_APPOINTMENT_TIME && length > 0)) {
+    if (time < FINAL_APPOINTMENT_TIME && length > 0) {
       // Check if the time slot is available
       const appointment = getAppointment(time);
       if (appointment.name === "available") {
+        if (time === FINAL_APPOINTMENT_TIME && length > 1){
+          return false;
+        }
         return true; // Appointment can be made
       }
     }
