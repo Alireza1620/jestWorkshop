@@ -83,7 +83,7 @@ This project contains the following files:
 ### Running the code
 
 1.  Open the `package.json` first and look at the `dependencies` (you will see `jest`) and look at the `scripts` - you will see `demo` and `test`.  The `scripts` definitions allow you to run two actions, `demo` and `test` (don't run them yet).
-1.  Open the file called `dayTest.js`.  It constains the following code:
+1.  Open the file called `dayDemo.js`.  It constains the following code:
 	```javascript
 	const {
 	  setUpDay,
