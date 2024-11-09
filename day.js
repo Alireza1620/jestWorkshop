@@ -64,6 +64,20 @@ function makeAppointment(time, person, length) {
   }
     
 }
+function checkAppointment(time, person, length) {
+  // Check if the time is within the valid range
+  if (time >= START_OF_DAY && time <= FINAL_APPOINTMENT_TIME) {
+    // Check if the length is valid (assuming MAX_APPOINTMENT_LENGTH is defined)
+    if (length > 0 && length <= MAX_APPOINTMENTS_PER_DAY) {
+      // Check if the time slot is available
+      const appointment = getAppointment(time);
+      if (appointment.name === "available") {
+        return true; // Appointment can be made
+      }
+    }
+  }
+  return false; // Appointment cannot be made
+}
 
 module.exports = {
   setUpDay,
