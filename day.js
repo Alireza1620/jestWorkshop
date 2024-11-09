@@ -75,7 +75,7 @@ function checkAppointment(time, length) {
       // Check if the time slot is available
       const appointment = getAppointment(time);
       if (appointment.name === "available") {
-        if (time === FINAL_APPOINTMENT_TIME && length > 1){
+        if (time == FINAL_APPOINTMENT_TIME && length > 1){
           return false;
         }
         return true; // Appointment can be made
