@@ -16,4 +16,8 @@ setUpDay();
 printAppointments();
 console.log("Making an appointment for John at 11am.");
 makeAppointment(11, "John", 1);
+makeAppointment(12, "John", 2);
+makeAppointment(13, "John", 1);
+makeAppointment(14, "John", 5);
+makeAppointment(16, "John", 4);
 printAppointments();
