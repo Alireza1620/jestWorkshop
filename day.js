@@ -57,8 +57,12 @@ function printAppointments() {
 // Make an appointment at a specific time.
 // THIS IS THE ONLY FUNCTION THAT YOU CAN CHANGE
 function makeAppointment(time, person, length) {
-  updateIndex(time, person, length);
-  return true;
+  if (updateIndex(time, person, length)){
+    return true;
+  }else{
+    return false;
+  }
+    
 }
 
 module.exports = {
