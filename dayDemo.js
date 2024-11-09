@@ -23,4 +23,7 @@ makeAppointment(16, "John", 4);
 //Next 2 lines are special tests:
 makeAppointment(17, "John", 5);
 //makeAppointment(17, "John", 1);
+
+//this is a test to see if the slot is already occupied will it change or not:
+makeAppointment(16, "Steve", 5);
 printAppointments();
