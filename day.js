@@ -67,8 +67,8 @@ function makeAppointment(time, person, length) {
 function checkAppointment(time, person, length) {
   // Check if the time is within the valid range
   if (time >= START_OF_DAY && time <= FINAL_APPOINTMENT_TIME) {
-    // Check if the length is valid (assuming length must be greater than 0)
-    if (length > 0) {
+    // Check if the length is valid
+    if ((time === FINAL_APPOINTMENT_TIME && length === 1) || (time < FINAL_APPOINTMENT_TIME && length > 0)) {
       // Check if the time slot is available
       const appointment = getAppointment(time);
       if (appointment.name === "available") {
